@@ -52,7 +52,7 @@
 					
 					<!-- Branding Image -->
 					<a class="navbar-brand" href="{{ url('/') }}">
-						Project Requirements
+					FAST.....
 					</a>
 				</div>
 				
