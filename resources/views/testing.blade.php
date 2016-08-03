@@ -83,7 +83,7 @@ Logo size should be 10px by 10 px in the left corner' ,array('class'=> 'form-con
 			
 			<!-- Table Body -->
 			<tbody>
-				{!! Form::open(array('url' => '/', 'method' => 'post')) !!}
+				{!! Form::open(array('url' => '/', 'method' => 'get')) !!}
 				<td>
 	<div class="form-group">			
 			
@@ -155,7 +155,7 @@ Logo size should be 10px by 10 px in the left corner' ,array('class'=> 'form-con
 	
 	<p> <br><h3>Screen Details</h3></p>
 		
-		{!! Form::open(array('url' => '/', 'method' => 'post')) !!}
+		{!! Form::open(array('url' => '/', 'method' => 'get')) !!}
 		<div class="form-group">			
 			<div class="col-sm-3">
 			{!! Form::label('Field Name', 'Field Name', array('class' => ' control-label')); !!}
