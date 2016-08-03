@@ -2,23 +2,35 @@
 @extends('layouts.app')
 
 @section('content')
-<script>
-	$(document).ready(function() {
-    $('#example').DataTable( {
-        "scrollY": 200,
-        "scrollX": true,
-		 fixedColumns: {
-        leftColumns: 2
-    }
-    } );
-} );
-	</script>
-	<style>
-	div.dataTables_wrapper {
-        width: 800px;
+
+
+<Style>
+	th, td { white-space: nowrap; }
+    div.dataTables_wrapper {
+       
         margin: 0 auto;
     }
+	
+
 	</style>
+<script>
+$(document).ready(function() {
+    var table = $('#example').DataTable( {
+	"bInfo" : false,
+        scrollY:        "300px",
+        scrollX:        true,
+        scrollCollapse: true,
+        paging:         false,
+		   fixedColumns:   {
+            leftColumns: 3,
+            rightColumns: 3
+        }
+        
+    } );
+	
+} );
+	
+</script>
 <div class="panel-body">
 	<!-- Display Validation Errors -->
 	@include('common.errors')
@@ -55,7 +67,7 @@ Logo size should be 10px by 10 px in the left corner' ,array('class'=> 'form-con
 		</div>
 		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">+</button>
   <div id="demo" class="collapse">
-		<table class="table table-striped contact-table" id="example">
+		<table class="display" id="example">
 			
 			<!-- Table Headings -->
 			<thead>
@@ -175,7 +187,7 @@ Logo size should be 10px by 10 px in the left corner' ,array('class'=> 'form-con
 		
 		<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">+</button>
   <div id="demo" class="collapse">
-		<table id ="example" class="table table-striped contact-table">
+		<table id ="example" class="stripe row-border order-column" width="100%">
 		
 				
 			<!-- Table Headings -->
