@@ -49,16 +49,17 @@
 				{!! Form::text('Description', 'Description' ,array('class'=> 'form-control')); !!}
 			</div>
 		</div>
-		
-			<div class="form-group">			
-			<div class="col-sm-6">
+		<div class="form-group">			
+			<div class="col-sm-12">
 			{!! Form::label('Expected Result', 'Expected Result', array('class' => ' control-label')); !!}
 				{!! Form::text('Expected Result', 'Expected Result' ,array('class'=> 'form-control')); !!}
 			</div>
 		</div>
+		
+		
 		@if ( $id == 2)
 			<div class="form-group">			
-			<div class="col-sm-6">
+			<div class="col-sm-12">
 			{!! Form::label('Expected Checks', 'Expected Checks', array('class' => ' control-label')); !!}
 			{!! Form::text('Expected Checks', 'Expected Checks',array('class'=> 'form-control')); !!}
 			</div>
@@ -79,7 +80,7 @@
 		@if ($id == 6 ||$id == 3)
 		<p> <br><h3>Screen Details</h3></p>
 		
-		{!! Form::open(array('url' => 'addTestCaseScreen/1', 'method' => 'post')) !!}
+		{!! Form::open(array('url' => 'addTestCaseScreen/3', 'method' => 'post')) !!}
 		<div class="form-group">			
 			<div class="col-sm-3">
 			{!! Form::label('Field Name', 'Field Name', array('class' => ' control-label')); !!}
@@ -108,7 +109,7 @@
 			{!! Form::text('Width','',array('class'=> 'form-control')); !!}
 			</div>
 		</div>
-		<div class=" col-sm-2">
+		<div class=" col-sm-12">
 			{!! Form::label('Test Case', '', array('class' => ' control-label')); !!}
 				<button type="submit" class="btn btn-default">
 					<i class="fa fa-plus"></i> Add Test Case
@@ -116,8 +117,10 @@
 				{!!Form::close() !!}
 			</div>
 	@endif
+	</div>
 	@if (isset($testCaseHeader) )
 			@if (count($testCaseHeader) > 0)
+				
 	<div class="panel panel-default">
 	<div class="panel-heading">
 		<p><h4>Test Case For Header</h4></p>
