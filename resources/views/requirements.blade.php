@@ -58,7 +58,7 @@
 		</div>
 		@if ( $id == 2)
 			<div class="form-group">			
-			<div class="col-sm-12">
+			<div class="col-sm-6">
 			{!! Form::label('Expected Checks', 'Expected Checks', array('class' => ' control-label')); !!}
 			{!! Form::text('Expected Checks', 'Expected Checks',array('class'=> 'form-control')); !!}
 			</div>
