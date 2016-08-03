@@ -64,9 +64,9 @@
 		
 		
 		 $xref_project = Project_req_xref::select('*')
-		  ->join('PROJECT_MODULES', 'xref_project_module_req.project_modules_id', '=', 'PROJECT_MODULES.id')
-            ->join('MASTER_REQUIREMENTS', 'xref_project_module_req.REQ_ID', '=', 'MASTER_REQUIREMENTS.id')
-              ->select('xref_project_module_req.*', 'PROJECT_MODULES.MODULES', 'MASTER_REQUIREMENTS.REQUIREMENTS')
+		  ->join('PROJECT_MODULES', 'XREF_PROJECT_MODULE_REQ.PROJECT_MODULES_ID', '=', 'PROJECT_MODULES.id')
+            ->join('MASTER_REQUIREMENTS', 'XREF_PROJECT_MODULE_REQ.REQ_ID', '=', 'MASTER_REQUIREMENTS.id')
+              ->select('XREF_PROJECT_MODULE_REQ.*', 'PROJECT_MODULES.MODULES', 'MASTER_REQUIREMENTS.REQUIREMENTS')
 			 -> orderBy('PROJECT_MODULES.MODULES', 'asc')
             ->get(array(
 
