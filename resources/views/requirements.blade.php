@@ -50,7 +50,12 @@
 			</div>
 		</div>
 		
-		
+			<div class="form-group">			
+			<div class="col-sm-6">
+			{!! Form::label('Expected Result', 'Expected Result', array('class' => ' control-label')); !!}
+				{!! Form::text('Expected Result', 'Expected Result' ,array('class'=> 'form-control')); !!}
+			</div>
+		</div>
 		@if ( $id == 2)
 			<div class="form-group">			
 			<div class="col-sm-12">
