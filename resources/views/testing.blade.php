@@ -45,7 +45,7 @@ $(document).ready(function() {
 		
 	</div>
 	
-	{!! Form::open(array('url' => '/', 'method' => 'post')) !!}
+	{!! Form::open(array('url' => '/', 'method' => 'get')) !!}
 	<div class="form-group">			
 			<div class="col-sm-3">
 			{!! Form::label('Checks', 'Checks', array('class' => ' control-label')); !!}
